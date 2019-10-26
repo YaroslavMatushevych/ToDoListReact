@@ -1,0 +1,133 @@
+.user-popup {
+  min-width: 0;
+  width: 220px;
+  border: 1px solid #ccc;
+  position: absolute;
+  font-size: 12px;
+  top: 10%;
+  right: -91%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.user-popup:before {
+  position: absolute;
+  top: 21px;
+  left: -9px;
+  display: inline-block;
+  border-top: 9px solid rgba(0, 0, 0, 0);
+  border-right: 9px solid #7b7b7b;
+  border-bottom: 9px solid rgba(0, 0, 0, 0);
+  content: "";
+}
+
+.thumb {
+  height: 188px;
+  position: relative;
+  transition: all linear .2s;
+}
+
+.thumb:hover .thumb-options{
+  opacity: 1;
+  transition: all linear .2s;
+}
+
+.thumbnail {
+  padding: 15px 15px 20px 15px;
+  text-align: center;
+}
+
+.thumb-photo {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  border-radius: 50%;
+}
+
+.thumb-options {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(50,67,77,0.8);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-popup-profile {
+  background-color: #65B688;
+  border-color: #65B688;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all linear .15s;
+}
+
+.btn-popup-profile:first-child {
+  margin-right: 5px;
+}
+
+.btn-popup-profile:last-child {
+  margin-left: 5px;
+}
+
+.btn-popup-profile:hover {
+  background-color: #74bd94;
+  border-color: #74bd94;
+  transition: all linear .15s;
+}
+
+.btn-popup-profile i {
+  padding: 10px;
+}
+.user-popup-info {
+  margin-top: 12px;
+}
+
+.user-popup-info small {
+  display: block;
+  font-weight: 400;
+  color: #999;
+}
+
+.user-popup-info h6 {
+  font-size: 14px;
+}
+
+.list-group-item {
+  padding: 7px 12px;
+  position: relative;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  align-items: center;
+}
+
+.list-group-item p{
+  font-size: 14px;
+}
+
+.list-group-item i{
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.posts-amount {
+  background-color: #65B688;;
+  border-radius: 2px;
+  margin-left: 5px;
+  color: white;
+  padding: 5px 8px;
+}
+

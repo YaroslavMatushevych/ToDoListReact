@@ -1,0 +1,82 @@
+.sidebar {
+  width: 250px;
+  background-color: #3A4B55;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 120%;
+  min-height: 100vh;
+  z-index: 10;
+  font-size: 14px;
+}
+
+.user-menu a {
+  padding: 18px 16px;
+  display: block;
+  width: 100%;
+  background: url(../../images/nav_arrow_right.png) no-repeat 228px;
+}
+
+.user-menu {
+  background-color: #2D3A42;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.user-info {
+  display: inline-block;
+  text-align: center;
+}
+
+.togglePopupProfile img {
+  width: 48px;
+  display: inline-block;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+
+.togglePopupProfile {
+  color: white;
+  text-decoration: none;
+}
+
+.user-info span {
+  font-size: 11px;
+  color: #999;
+  display: block;
+  margin: 2px 0 0 0;
+}
+
+.sidebar.active{
+  left: -211px;
+
+  .user-info {
+    display: none;
+  }
+
+  .user-menu {
+    a {
+      padding: 8px 0;
+      background: none;
+      text-align: right;
+    }
+    .user-popup:before {
+      top: 10px;
+    }
+  }
+
+  .togglePopupProfile {
+    img {
+      width: 31px;
+    }
+  }
+  .navigation-sub-list {
+    display: none;
+    position: absolute;
+    right: -36%;
+    top: 0;
+    list-style: none;
+    background: #3A4B55;
+  }
+}

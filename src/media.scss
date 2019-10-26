@@ -1,0 +1,134 @@
+@media screen and(max-width: 1060px) {
+  .sidebar-toggle {
+    display: none;
+  }
+
+  .page-content {
+    margin: 0 25px 0 55px;
+  }
+
+  .sidebar{
+    left: -211px;
+
+    .user-info {
+      display: none;
+    }
+
+    .user-menu {
+      a {
+        padding: 8px 0;
+        background: none;
+        text-align: right;
+      }
+      .user-popup:before {
+        top: 10px;
+      }
+    }
+
+    .togglePopupProfile {
+      img {
+        width: 31px;
+      }
+    }
+    .navigation-sub-list {
+      display: none;
+      position: absolute;
+      right: -36%;
+      top: 0;
+      list-style: none;
+      background: #3A4B55;
+    }
+  }
+}
+
+@media screen and (max-width:880px){
+  .tasks-container {
+    order: 2;
+    width: 100%;
+  }
+
+  .task-tags-container {
+    order: 1;
+    width: 100%;
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tags{
+      width:100%;
+      position: relative;
+      margin-right:4px;
+    }
+
+  }}
+
+@media screen and (max-width:800px) {
+  * {
+    transition: ease-in-out 1s;
+  }
+  .create-btn-container {
+    display: none;
+  }
+  .fixed-btn {
+    z-index: 99;
+    position: fixed;
+    right: 20px;
+    bottom: 0px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .tasks-container {
+    align-content: center;
+    flex-flow: column wrap;
+    width:65%;
+  }
+  .todo-list-tools {
+    display: flex;
+    flex-flow: column wrap;
+    align-items:center;
+    .todo-list-search {
+      margin-bottom: 16px;
+    }
+  }
+  .tagsContainer{
+    display: block;
+    width:100%;
+    border-top:0.1em solid rgb(240, 240, 240);
+    margin-top: 8px;
+    padding-top: 8px;
+    span {
+      color:grey;
+    }
+    button {
+      border:none;
+      background-color: #fff;
+      height:10px;
+      width:10px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+  .search-label, .sort-label {
+    display: none;
+  }
+}
+
+@media screen and (max-width:730px){
+  .tasks-container {
+    width: 100%;
+  }
+  .task-tags-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width:500px){
+  .addTags {
+    &:before {
+      content: 'Add tag'
+    }
+  }
+}
+

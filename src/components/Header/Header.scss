@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    background-color: #518CA3;
+
+  .navbar-header {
+    height: 100%;
+    position: relative;
+
+    .navbar-logo {
+      display: inline-block;
+      padding: 8px 0;
+    }
+
+    .sidebar-toggle {
+      position: absolute;
+      right: -30px;
+      top: 13px;
+      padding: 6px 7px 7px 7px;
+      background-color: rgba(0, 0, 0, 0.2);
+      height: 29px;
+      cursor: pointer;
+    }
+  }
+  .navbar-greeting {
+    padding: 13px 0;
+  }
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #3A4B55;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  z-index: 10;
+}

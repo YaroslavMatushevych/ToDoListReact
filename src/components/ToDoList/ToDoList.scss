@@ -1,0 +1,110 @@
+.todo-list-tools {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-list-search, .todo-list-sort {
+  display: inline-block;
+}
+
+.task-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.tasks-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 85%;
+}
+
+.task-tags-container {
+  width: 15%;
+  min-height: 100%;
+  border: 1px solid #DDD;
+  margin-bottom: 35px;
+  padding: 15px 10px;
+  position: relative;
+  form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .tags{
+    position: relative;
+    width:90%;
+    margin-right:8px;
+  }
+  .addTags {
+    margin-left:4px;
+    border:none;
+    height:40px;
+    width:40px;
+    background: url('https://image.flaticon.com/icons/svg/148/148764.svg');
+    background-repeat: no-repeat;
+
+  }
+}
+
+.search, .sort {
+  height: 34px;
+  padding: 8px 20px 8px 8px;
+  color: #505050;
+  outline: 0;
+  font-weight: 400;
+  vertical-align: middle;
+  border: 1px solid #DDD;
+  border-radius: 0;
+  margin-left: 10px;
+  width: 190px;
+}
+
+.sort {
+  color: #333;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+
+.sort::placeholder {
+  color: #333;
+}
+
+.search-label, .sort-label {
+  font-weight: 600;
+  vertical-align: middle;
+  color: #333;
+}
+
+.search-icon, .sort-icon {
+  background-color: #546672;
+  color: white;
+  font-size: 16px;
+  padding: 9px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+.sort-icon {
+  padding: 9px 12px;
+}
+.tagsContainer{
+  display: block;
+  width:100%;
+  border-top:0.1em solid rgb(240, 240, 240);
+  margin-top: 0px;
+  padding-top: 8px;
+}
+
+.addTags{
+  margin-top:4px;
+  width:40px;
+  height:40px;
+}

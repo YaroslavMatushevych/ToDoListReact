@@ -1,0 +1,54 @@
+.main-block {
+  position: relative;
+}
+
+.page-content {
+  margin: 0 25px 0 265px;
+  position: relative;
+  font-size: 14px;
+}
+
+.page-content.active {
+  margin: 0 25px 0 55px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header small {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin: 8px 0 0 0;
+}
+
+.page-title {
+  font-weight: 400;
+  padding: 30px 0;
+  display: inline-block;
+}
+
+.create-btn-container {
+  display: inline-block;
+}
+
+.show-modal-btn {
+  padding: 15px;
+  background: #546672;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+
+.fixed-btn {
+  z-index: 99;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+}

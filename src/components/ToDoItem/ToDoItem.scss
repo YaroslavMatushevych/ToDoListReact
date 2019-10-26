@@ -1,0 +1,156 @@
+.task-item {
+  width: 45%;
+  border: 1px solid #ddd;
+  border-left-width: 3px;
+  margin-bottom: 35px;
+  height: 188px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task-item:nth-last-child(1):nth-child(odd) {
+  margin-right: auto;
+  margin-left: 3%;
+}
+
+.overlay-complete {
+  display: none;
+}
+
+.task-item.done {
+  .overlay-complete {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.3);
+  }
+
+  .overlay-complete i {
+    font-size: 70px;
+    color: #D65C4F;
+  }
+
+  .overlay-complete p {
+    font-size: 30px;
+    color: #D65C4F;
+  }
+}
+
+.task-info, .task-description, .task-deadline-timer, .task-tools {
+  display: inline-block;
+}
+
+.task-deadline-timer {
+  padding: 8px 10px;
+}
+
+.task-tools i{
+  color: #999;
+  cursor: pointer;
+  padding: 10px;
+  border-left: 1px solid #eee;
+}
+
+.task-tools i:hover {
+  color: #777;
+}
+
+.task-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  line-height: 1.42857143;
+  display: flex;
+}
+
+.task-info {
+  width: 25%;
+  text-align: right;
+  padding: 0 15px;
+  vertical-align: top;
+  font-size: 13px;
+  color: #777;
+}
+
+.task-description {
+  font-size: 15px;
+  width: 75%;
+  height: 100%;
+  padding: 0 15px;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task-heading {
+  font-size: 15px;
+  font-weight: 600;
+  color: #428bca;
+}
+
+.card-tags {
+  max-height: 60px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.task-footer {
+  border-top: 1px solid #e5e5e5;
+  border-radius: 0 0 2px 2px;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: space-between;
+  color: #777;;
+}
+
+.priority-text {
+  margin: 7px 0;
+}
+
+.priority-item {
+  color: white;
+  font-size: 12px;
+  padding: 5px 9px;
+  line-height: 13px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.high {
+  background-color: #D65C4F;
+}
+
+.middle {
+  background-color: #ffc011;
+}
+
+.low {
+  background-color: #65B688;
+}
+
+.high-border {
+  border-left-color: #D65C4F;
+}
+
+.middle-border {
+  border-left-color: #ffc011;
+}
+
+.low-border {
+  border-left-color: #65B688;;
+}
+
+.text-danger {
+  color: #D65C4F;
+}
+@media screen and ( max-width:800px){
+  .task-item {
+    width:80%;
+  }
+}
