@@ -3,7 +3,6 @@ import './NavTabs.scss';
 import { tabsCollection }  from '../../constants/constants.js'
 
 const NavTabs = ({ toggleClass, activeTab }) => {
-
     const countDoneItems = () => {
         let count = 0;
         let toDoListData;

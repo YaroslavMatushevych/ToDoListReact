@@ -94,7 +94,9 @@ class ToDoList extends Component {
     };
 
     renderToDoItems = items => {
-        items = sortListByTabs(items, this.state.activeTab);
+        if (items) {
+            items = sortListByTabs(items, this.state.activeTab);
+        }
         if (items === undefined) { return <p style={pStyle}>Wait, please...</p> }
         else if (items === null || !items.length) { return <p style={pStyle}>The list is empty, add something, please</p> }
         else {
@@ -138,7 +140,6 @@ class ToDoList extends Component {
         render() {
         const { activeTab, openSortSelect, filtered } = this.state;
         const { handleTagChange, handleTagDelete, handleTagSubmit, listTags, tags } = this.props;
-
             return (
             <>
                 <NavTabs toggleClass={this.toggleClass} activeTab={activeTab}/>
