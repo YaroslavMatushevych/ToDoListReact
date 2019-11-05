@@ -10,11 +10,17 @@
   .sidebar{
     left: -211px;
 
-    .user-info {
-      display: none;
-    }
-
     .user-menu {
+      .user-info {
+        display: none;
+      }
+
+      .togglePopupProfile {
+        img {
+          width: 31px;
+        }
+      }
+
       a {
         padding: 8px 0;
         background: none;
@@ -22,12 +28,6 @@
       }
       .user-popup:before {
         top: 10px;
-      }
-    }
-
-    .togglePopupProfile {
-      img {
-        width: 31px;
       }
     }
 
@@ -47,12 +47,15 @@
 //}
 
 @media screen and (max-width:800px) {
+
   * {
     transition: ease-in-out 1s;
   }
+
   .create-btn-container {
     display: none;
   }
+
   .fixed-btn {
     z-index: 99;
     position: fixed;
@@ -61,6 +64,7 @@
     height: 60px;
     width: 60px;
   }
+
   .todo-list-tools {
     display: flex;
     flex-flow: column wrap;
@@ -69,11 +73,17 @@
       margin-bottom: 16px;
     }
   }
+
   .tasks-container {
     align-content: center;
     flex-flow: column wrap;
     width:65%;
+
+    .task-item {
+      width: 100%;
+    }
   }
+
   .search-label, .sort-label {
     display: none;
   }
@@ -83,6 +93,5 @@
   .tasks-container {
     width: 100%;
   }
-
 }
 

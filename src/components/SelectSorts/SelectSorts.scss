@@ -26,12 +26,12 @@
     border: none;
     width: 100%;
     transition: all linear 0.3s;
-  }
 
-  .dropdown-sort:hover {
-    color: #ffffff;
-    background-color: #3A4B55;
-    box-shadow: 1px 0 0 #3A4B55, -1px 0 0 #3A4B55;
-    transition: all linear 0.3s;
+    &:hover {
+      color: #ffffff;
+      background-color: #3A4B55;
+      box-shadow: 1px 0 0 #3A4B55, -1px 0 0 #3A4B55;
+      transition: all linear 0.3s;
+    }
   }
 }

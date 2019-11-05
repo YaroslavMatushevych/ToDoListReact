@@ -1,32 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import PageContainer from './components/PageContainer/PageContainer';
 import './styles.scss';
 import './media.scss';
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            openNav: false
-        }
-    }
+const App = () => {
 
-    toggleOpenHandler = e => {
-        e.preventDefault();
-        const { openNav } = this.state;
-        this.setState({openNav: !openNav})
+  const [openNav, toggleOpenNav] = useState(false);
+
+  const toggleOpenHandler = e => {
+    e.preventDefault();
+    toggleOpenNav(!openNav);
+  };
+
+  return (
+    <>
+      <Header toggleOpenHandler={toggleOpenHandler}/>
+      <PageContainer openNav={openNav}/>
+    </>
+  );
 };
-
-    render() {
-
-        return (
-            <>
-                <Header toggleOpenHandler={this.toggleOpenHandler}/>
-                <PageContainer openNav={this.state.openNav}/>
-            </>
-        );
-    }
-}
 
 export default App;

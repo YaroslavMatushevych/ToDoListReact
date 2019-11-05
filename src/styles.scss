@@ -1,19 +1,29 @@
-@import './constants/constants.scss';
-
 * {
     outline: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 input[type=search]{
     -moz-appearance: none;/* older firefox */
     -webkit-appearance: none; /* safari, chrome, edge and ie mobile */
     appearance: none; /* rest */
 }
-
 .title {
     font-size: 24px;
     font-weight: 500;
 }
+
+@import './constants/constants.scss';
+@import './components/Footer/Footer';
+@import './components/Header/Header';
+@import './components/MenuNavigation/MenuNavigation';
+@import './components/ModalForm/ModalForm';
+@import './components/NavTabs/NavTabs';
+@import './components/PageContainer/PageContainer';
+@import './components/PopupProfile/PopupProfile';
+@import './components/SelectSorts/SelectSorts';
+@import './components/Sidebar/Sidebar';
+@import './components/ToDoItem/ToDoItem';
+@import './components/ToDoList/ToDoList';
+@import './media';

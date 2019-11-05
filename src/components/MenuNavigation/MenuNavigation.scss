@@ -3,67 +3,67 @@
   margin: 0 0 35px 0;
   padding: 0;
   border-bottom: 1px solid #49565D;
-}
 
-.navigation-item {
-  border-top: 1px solid #49565D;
-  position: relative;
-}
+  .navigation-item {
+    border-top: 1px solid #49565D;
+    position: relative;
 
-.navigation-item-link, .navigation-subitem-link {
-  border-left: 3px solid transparent;
-  color: rgba(255,255,255,0.8);
-  padding: 15px;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-}
+    .active{
+      color: #fff;
+      background-color: #65B688;
+      border-color: #65B688;
 
-.navigation-item .active{
-  color: #fff;
-  background-color: #65B688;
-  border-color: #65B688;
-}
+      &:hover{
+        color: #fff;
+        background-color: #65B688;
+        border-color: #65B688;
+      }
+    }
+  }
 
-.navigation-item .active:hover{
-  color: #fff;
-  background-color: #65B688;
-  border-color: #65B688;
-}
+  .navigation-item-link, .navigation-subitem-link {
+    border-left: 3px solid transparent;
+    color: rgba(255,255,255,0.8);
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+  }
 
-.navigation-item-link:hover {
-  color: #fff;
-  border-left: 3px solid #EE8366;
-  background-color: #2C3A42;
-}
+  .navigation-item-link:hover {
+    color: #fff;
+    border-left: 3px solid #EE8366;
+    background-color: #2C3A42;
+  }
 
-.navigation-subitem {
-  border-top: 1px solid rgba(255,255,255,0.05);
-  font-size: 11px;
-  background-color: rgba(0, 0, 0, 0.15);
-}
+  .navigation-subitem {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 11px;
+    background-color: rgba(0, 0, 0, 0.15);
 
-.navigation-subitem .active {
-  color: white;
-  background: rgba(0,0,0,0.2) url(../../images/nav_arrow_right.png) no-repeat 228px;
-}
+    &:first-child {
+      border-top: none;
+    }
 
-.navigation-subitem .active:hover {
-  background-color: rgba(0,0,0,0.2);
-  color: white;
-}
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
 
-.navigation-subitem:first-child {
-  border-top: none;
-}
+    .active {
+      color: white;
+      background: rgba(0,0,0,0.2) url(../../images/nav_arrow_right.png) no-repeat 228px;
 
-.navigation-subitem:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
+      &:hover {
+        background-color: rgba(0,0,0,0.2);
+        color: white;
+      }
+    }
+  }
 
-.navigation-subitem-link:hover {
-   color: white;
- }
+  .navigation-subitem-link:hover {
+    color: white;
+  }
+}
 
 a.disabled {
   cursor: not-allowed;

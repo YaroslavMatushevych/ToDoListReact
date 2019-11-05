@@ -32,12 +32,12 @@
 
   .overlay-complete i {
     font-size: 70px;
-    color: #D65C4F;
+    color: $high;
   }
 
   .overlay-complete p {
     font-size: 30px;
-    color: #D65C4F;
+    color: $high;
   }
 }
 
@@ -123,34 +123,30 @@
 }
 
 .high {
-  background-color: #D65C4F;
+  background-color: $high;
 }
 
 .middle {
-  background-color: #ffc011;
+  background-color: $middle;
 }
 
 .low {
-  background-color: #65B688;
+  background-color: $low;
 }
 
 .high-border {
-  border-left-color: #D65C4F;
+  border-left-color: $high;
 }
 
 .middle-border {
-  border-left-color: #ffc011;
+  border-left-color: $middle;
 }
 
 .low-border {
-  border-left-color: #65B688;;
+  border-left-color: $low;
 }
 
 .text-danger {
-  color: #D65C4F;
+  color: $high;
 }
-@media screen and ( max-width:800px){
-  .task-item {
-    width:80%;
-  }
-}
+

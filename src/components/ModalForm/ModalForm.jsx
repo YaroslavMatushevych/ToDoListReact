@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import shortid from 'shortid'
-import './ModalForm.scss';
 import {attachedImageValidation, toBase64Promise} from '../../utils/helpers.jsx';
 import DateTimePicker from 'react-datetime-picker';
 
@@ -139,7 +137,7 @@ class ModalForm extends Component {
               value={date}
               className='info-input'
             />
-            <div className="attach-image-block" name="image-drop"
+            <div className="attach-image-block"
                  onDragEnter={this.onAttachedImageDragEnter}
                  onDragOver={this.onAttachedImageDragOver} onDrop={this.onAttachedImageDrop}>
               <input type="file" name="image-input" className="attach-image"
