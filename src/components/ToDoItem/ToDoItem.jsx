@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, from 'react';
 import PropTypes from 'prop-types';
 import TimerDeadline from '../TimerDeadline/TimerDeadline';
 import MyContext from '../../MyContext/MyContext';
@@ -88,4 +88,4 @@ ToDoItem.defaultProps = {
 };
 
 
-export default memo(ToDoItem);
+export default ToDoItem;
