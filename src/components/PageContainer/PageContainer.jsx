@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect, memo } from 'react';
+import React, { useState, memo } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import ModalForm from '../ModalForm/ModalForm';
 import ToDoList from '../ToDoList/ToDoList';

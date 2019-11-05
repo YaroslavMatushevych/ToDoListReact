@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import shortid from 'shortid'
 
 const TagsInput = props => {
@@ -26,4 +26,4 @@ const TagsInput = props => {
         );
 };
 
-export default TagsInput;
+export default memo(TagsInput);

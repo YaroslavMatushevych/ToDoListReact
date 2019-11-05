@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './Header.scss';
 import logo from '../../images/logo-text.png'
 
@@ -20,4 +20,4 @@ const Header = props => {
         );
 };
 
-export default Header;
+export default memo(Header);
