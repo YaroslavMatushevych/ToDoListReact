@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ToDoListReact/static/css/main.c51a54cb.chunk.css",
-    "main.js": "/ToDoListReact/static/js/main.3d5e1cf5.chunk.js",
-    "main.js.map": "/ToDoListReact/static/js/main.3d5e1cf5.chunk.js.map",
+    "main.js": "/ToDoListReact/static/js/main.3d2a9e18.chunk.js",
+    "main.js.map": "/ToDoListReact/static/js/main.3d2a9e18.chunk.js.map",
     "runtime-main.js": "/ToDoListReact/static/js/runtime-main.52a87e32.js",
     "runtime-main.js.map": "/ToDoListReact/static/js/runtime-main.52a87e32.js.map",
     "static/css/2.ef8e8b31.chunk.css": "/ToDoListReact/static/css/2.ef8e8b31.chunk.css",
     "static/js/2.fc94ff15.chunk.js": "/ToDoListReact/static/js/2.fc94ff15.chunk.js",
     "static/js/2.fc94ff15.chunk.js.map": "/ToDoListReact/static/js/2.fc94ff15.chunk.js.map",
     "index.html": "/ToDoListReact/index.html",
-    "precache-manifest.36cee4d9ec200364f0bfc54d7d11a528.js": "/ToDoListReact/precache-manifest.36cee4d9ec200364f0bfc54d7d11a528.js",
+    "precache-manifest.75466d7aacad2154345ecd19919d3a3f.js": "/ToDoListReact/precache-manifest.75466d7aacad2154345ecd19919d3a3f.js",
     "service-worker.js": "/ToDoListReact/service-worker.js",
     "static/css/2.ef8e8b31.chunk.css.map": "/ToDoListReact/static/css/2.ef8e8b31.chunk.css.map",
     "static/css/main.c51a54cb.chunk.css.map": "/ToDoListReact/static/css/main.c51a54cb.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.ef8e8b31.chunk.css",
     "static/js/2.fc94ff15.chunk.js",
     "static/css/main.c51a54cb.chunk.css",
-    "static/js/main.3d5e1cf5.chunk.js"
+    "static/js/main.3d2a9e18.chunk.js"
   ]
 }
