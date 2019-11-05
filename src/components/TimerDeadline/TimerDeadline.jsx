@@ -1,7 +1,7 @@
 import React from 'react';
 import Timer from "react-compound-timer";
 
-const TimerDeadline = (props) => {
+const TimerDeadline = props => {
         let deadline = Date.parse(props.deadline) - Date.parse(new Date());
         const spanStyle = {
             color: "#777",
@@ -10,7 +10,7 @@ const TimerDeadline = (props) => {
 
         return (
             <div className='task-deadline-timer'>
-                <i className="far fa-clock" style={{marginRight: "3px"}}></i>
+                <i className="far fa-clock" style={{marginRight: "3px"}}/>
                 <Timer
                     initialTime={deadline}
                     direction="backward"

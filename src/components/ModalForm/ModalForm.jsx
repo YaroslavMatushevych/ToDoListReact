@@ -17,7 +17,6 @@ class ModalForm extends Component {
       priority: 'Low',
       attachedImage: '',
       isDone: false,
-      tag: [],
     };
     this.attachedImageRef = React.createRef();
   }
@@ -92,69 +91,9 @@ class ModalForm extends Component {
     event.preventDefault();
   };
 
-  onTagAdd = e => {
-    let currentTags = this.state.tag;
-    let index = e.target.selectedIndex;
-    let optionElement = e.target.childNodes[index];
-    let tagId = optionElement.getAttribute('id');
-    let tagValue = e.target.value;
-
-    let newTag = {};
-
-    if (tagValue === 'None') {
-      tagValue = [];
-    } else {
-      newTag.tag = tagValue;
-      newTag.id = tagId;
-      for (let i = 0; i <= currentTags.length - 1; i++) {
-        if (currentTags[i].tag === newTag.tag) {
-          return null;
-        }
-      }
-      currentTags.push(newTag);
-    }
-
-    this.setState({
-      tag: currentTags
-    })
-
-  };
-
-  deleteTagFromModal = (event) => {
-    let deletedTag = event.target.textContent;
-    let currentTags = this.state.tag;
-    let id = currentTags.indexOf(deletedTag);
-
-    currentTags.splice(id, 1);
-
-    this.setState({tags: currentTags})
-  };
-
-  renderChoosenTags = tag => {
-    console.log(tag);
-    return tag.map(item => {
-      return (
-        <div key={shortid()} id={item.id} className="tag-on-modal">
-          <p onClick={this.deleteTagFromModal} className='tag-name'>
-            {item.tag}
-            <i className="fas fa-times cross delete-tag"/>
-          </p>
-        </div>
-      );
-    })
-  };
-
   render() {
     const {title, description, priority, date, attachedImage} = this.state;
-    const {edit, toggleOpenHandler, listTags} = this.props;
-    console.log(this.state.tag);
-
-    const allTags = listTags.map((item) => {
-      return (
-        <option id={item.id} key={shortid()} className="option" value={item.tag}>{item.tag}</option>
-      );
-    });
-
+    const {edit, toggleOpenHandler} = this.props;
 
     return (
       <div className="overlay">
@@ -193,18 +132,6 @@ class ModalForm extends Component {
               <option className="option middle" value="Middle">Middle</option>
               <option className="option high" value="High">High</option>
             </select>
-            <p className="info-input-descript">Select Tags</p>
-            <select className="info-input" onChange={this.onTagAdd}>
-              <option key="default" defaultValue disabled className="option" value="Choose Tag">Choose
-                Tag
-              </option>
-              {allTags}
-              <option className="option" key="none">None</option>
-            </select>
-            <div className="choosen-tags">
-              {this.renderChoosenTags(this.state.tag)}
-            </div>
-
             <p className="info-input-descript">Enter deadline</p>
             <DateTimePicker
               minDate={new Date()}

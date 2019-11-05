@@ -10,9 +10,6 @@ import {
     getItems,
     setItems,
     findArrayId,
-    getTagsItems,
-    deleteTagItem,
-    addTagsItem,
     editItem } from '../../utils/helpers.jsx';
 
 
@@ -43,27 +40,6 @@ const PageContainer = ({openNav}) => {
         toggleEditModal(false)
     };
 
-    const [listTags, setListTags] = useState(getTagsItems());
-    const handleTagDelete = id => {
-        deleteTagItem(id);
-        setListTags(getTagsItems());
-    };
-
-    const [tags, changeTag] = useState([]);
-    const handleTagChange = e => {
-        const tag = {
-            tag: e.target.value,
-            id: e.target.value
-        };
-        changeTag(tag);
-    };
-
-    const handleTagSubmit = e => {
-        e.preventDefault();
-        addTagsItem(tags);
-        setListTags(getTagsItems());
-    };
-
     return (
             <MyContext.Provider
                 value={{
@@ -80,14 +56,12 @@ const PageContainer = ({openNav}) => {
                 }}>
                 <main className='main-block'>
                 <Sidebar openNav={openNav} />
-                <div className={openNav ? 'page-content active': 'page-content'}>
+                <div className={openNav ? 'page-content active' : 'page-content'}>
                     {modal && <ModalForm
                         newItemSubmitHandler={newItemSubmitHandler}
                         toggleOpenHandler={toggleOpenHandler}
                         edit={edit}
                         editionItem={editionItem}
-                        listTags={listTags}
-                        tags={tags}
                         editItem={wrapperEditItem}
                     />}
                     <div className="page-header">
@@ -96,21 +70,16 @@ const PageContainer = ({openNav}) => {
                         </div>
                         <div className='create-btn-container'>
                             <button className="show-modal-btn" onClick={toggleOpenHandler}>
-                                <i className="fas fa-plus"></i>
+                                <i className="fas fa-plus"/>
                                 Add Task
                             </button>
                         </div>
                         <button className="show-modal-btn fixed-btn" onClick={toggleOpenHandler}>
-                            <i className="fas fa-plus"></i>
+                            <i className="fas fa-plus"/>
                         </button>
                     </div>
                     <ToDoList
                         data={data}
-                        listTags={listTags}
-                        tags={tags}
-                        handleTagDelete={handleTagDelete}
-                        handleTagChange={handleTagChange}
-                        handleTagSubmit={handleTagSubmit}
                     />
                     <Footer/>
                 </div>

@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-import shortid from 'shortid';
 import ToDoItem from '../ToDoItem/ToDoItem';
 import NavTabs from "../NavTabs/NavTabs";
 import SelectSorts from '../SelectSorts/SelectSorts';
-
-import TagsContainer from '../TagsContainer/TagsContainer';
 import {
     sortListByTabs,
     sortByPriority,
@@ -102,7 +99,7 @@ class ToDoList extends Component {
         else {
             return items.map(item => {
                 return (
-                    <ToDoItem key={shortid()}
+                    <ToDoItem key={item.id}
                               data={item}
                               makeDoneUndone={this.makeDoneUndone}
                               deleteItemWrapper={this.deleteItemWrapper}
@@ -139,7 +136,6 @@ class ToDoList extends Component {
 
         render() {
         const { activeTab, openSortSelect, filtered } = this.state;
-        const { handleTagChange, handleTagDelete, handleTagSubmit, listTags, tags } = this.props;
             return (
             <>
                 <NavTabs toggleClass={this.toggleClass} activeTab={activeTab}/>
@@ -175,20 +171,9 @@ class ToDoList extends Component {
                         <option value="month">During the month</option>
                     </select>
                 </div>
-                    <div className="task-list grid"
-                    >
+                    <div className="task-list grid">
                         <div className="tasks-container">
                             {this.renderToDoItems(filtered)}
-                        </div>
-                        <div className="task-tags-container">
-                            <TagsContainer
-                                listTags={listTags}
-                                tags={tags}
-                                onSearchHandler={this.onSearchHandler}
-                                handleTagDelete={handleTagDelete}
-                                handleTagChange={handleTagChange}
-                                handleTagSubmit={handleTagSubmit}
-                            />
                         </div>
                     </div>
             </>

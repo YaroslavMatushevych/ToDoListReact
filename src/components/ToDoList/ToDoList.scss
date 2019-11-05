@@ -1,5 +1,5 @@
 .todo-list-tools {
-  margin-top: 35px;
+  margin: 35px;
   display: flex;
   justify-content: space-between;
 }
@@ -18,36 +18,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 85%;
-}
-
-.task-tags-container {
-  width: 15%;
-  min-height: 100%;
-  border: 1px solid #DDD;
-  margin-bottom: 35px;
-  padding: 15px 10px;
-  position: relative;
-  form {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  .tags{
-    position: relative;
-    width:90%;
-    margin-right:8px;
-  }
-  .addTags {
-    margin-left:4px;
-    border:none;
-    height:40px;
-    width:40px;
-    background: url('https://image.flaticon.com/icons/svg/148/148764.svg');
-    background-repeat: no-repeat;
-
-  }
+  width: 100%;
 }
 
 .search, .sort {
@@ -70,6 +41,7 @@
   font-weight: 700;
   cursor: pointer;
   position: relative;
+  background-color: white;
 }
 
 .sort::placeholder {
@@ -95,16 +67,8 @@
 .sort-icon {
   padding: 9px 12px;
 }
-.tagsContainer{
-  display: block;
-  width:100%;
-  border-top:0.1em solid rgb(240, 240, 240);
-  margin-top: 0px;
-  padding-top: 8px;
+
+.select-deadline {
+  font-size: 18px;
 }
 
-.addTags{
-  margin-top:4px;
-  width:40px;
-  height:40px;
-}

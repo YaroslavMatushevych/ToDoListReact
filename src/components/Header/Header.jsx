@@ -14,7 +14,7 @@ const Header = props => {
                     </a>
                 </div>
                 <div>
-                    <h2 className="navbar-greeting">Hi, from Wizards Team!</h2>
+                    <h2 className="navbar-greeting">Hi, from Yaroslav!</h2>
                 </div>
             </header>
         );

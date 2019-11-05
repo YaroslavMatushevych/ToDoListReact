@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import TimerDeadline from '../TimerDeadline/TimerDeadline';
 import MyContext from '../../MyContext/MyContext';
 import './ToDoItem.scss';
-import shortid from "shortid";
 
 class ToDoItem extends Component {
 
@@ -18,17 +17,10 @@ class ToDoItem extends Component {
 
 
     render() {
-        const {title, description, priority, date, id, day, month, year, isDone, tag, attachedImage} = this.props.data;
+        const {title, description, priority, date, id, day, month, year, isDone, attachedImage} = this.props.data;
         let done = '';
         if (isDone){done = 'done'}
 
-        const tagsContainer = tag.map(item => {
-                return (
-                <div key ={shortid()} id={item.id} className="tag-on-modal">
-                    <p className='tag-name'>{item.tag}</p>
-                </div>
-                )
-        });
         return (
                 <MyContext.Consumer>
                     {context => (
@@ -36,7 +28,7 @@ class ToDoItem extends Component {
                         >
                     <div style={{position: "relative", height:"100%", width: "100%"}}>
                         <div className="overlay-complete">
-                            <i className="fas fa-check"></i>
+                            <i className="fas fa-check"/>
                             <p>Completed</p>
                         </div>
                         <div className="task-main">
@@ -45,24 +37,21 @@ class ToDoItem extends Component {
                                     <h6 className='task-heading'>{title}</h6>
                                     <p className="task-description-text">{description}</p>
                                 </div>
-                                <div className="card-tags">
-                                    {tagsContainer}
-                                </div>
                             </div>
                             <div className="task-info">
                                 <p className="task-info-added">{month} {day}, {year} </p>
                                 <p className="priority-text"><span className={'priority-item ' + priority.toLocaleLowerCase()}>{priority}</span></p>
-                                <p className="task-info-deadline-day"></p>
+                                <p className="task-info-deadline-day"/>
                             </div>
                         </div>
                     </div>
                     <div className="task-footer">
                         <TimerDeadline deadline={date}/>
                         <div className="task-tools">
-                            {attachedImage && <a href={attachedImage} download><i className="fas fa-file-download" id="download"></i></a>}
-                            <i className="fas fa-check" id="complete" onClick={this.wrapperOnClick}></i>
-                            <i className="fas fa-pencil-alt" id="edit" onClick={context.openEditModal}></i>
-                            <i className="far fa-trash-alt" id="delete" onClick={this.wrapperOnClick}></i>
+                            {attachedImage && <a href={attachedImage} download><i className="fas fa-file-download" id="download"/></a>}
+                            <i className="fas fa-check" id="complete" onClick={this.wrapperOnClick}/>
+                            <i className="fas fa-pencil-alt" id="edit" onClick={context.openEditModal}/>
+                            <i className="far fa-trash-alt" id="delete" onClick={this.wrapperOnClick}/>
                         </div>
                     </div>
                 </div>

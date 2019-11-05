@@ -4,7 +4,7 @@ import Yarma from '../../images/YARMA.png'
 
 const PopupProfile = () => {
 
-        let toDoListData = JSON.parse(localStorage["toDoListData"]);
+        let toDoListData = JSON.parse(localStorage.getItem("toDoListData"));
 
         return (
             <div className="user-popup">
@@ -13,8 +13,8 @@ const PopupProfile = () => {
                         <img className="thumb-photo" alt="Yaroslav Matushevych" src={Yarma}/>
                             <div className="thumb-options">
 									<div>
-										<button className="btn-popup-profile"><i className="fas fa-pencil-alt"></i></button>
-										<button className="btn-popup-profile"><i className="fas fa-trash"></i></button>
+										<button className="btn-popup-profile"><i className="fas fa-pencil-alt"/></button>
+										<button className="btn-popup-profile"><i className="fas fa-trash"/></button>
 									</div>
                             </div>
                     </div>
@@ -27,10 +27,10 @@ const PopupProfile = () => {
                 <ul className="list-group">
                     <li className="list-group-item">
                         <p style={{display: "inline-block"}}>
-                            <i className="fas fa-edit"></i>
+                            <i className="fas fa-edit"/>
                             My tasks
                         </p>
-                        <span className="posts-amount">{toDoListData.length}</span></li>
+                        <span className="posts-amount">{toDoListData ? toDoListData.length : 0}</span></li>
                 </ul>
             </div>
         );

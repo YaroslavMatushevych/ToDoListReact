@@ -122,54 +122,19 @@ export function filterByDate(selected) {
     let filtered_list = getItems();
 
     if (selected === "today"){
-        return filtered_list.filter( item => (new Date(item.date).getMonth() - date_now.getMonth() ===0) && (new Date(item.date).getDate() - date_now.getDate() === 0 ) );
+        return filtered_list.filter( item => (new Date(item.date).getMonth() - date_now.getMonth() === 0) && (new Date(item.date).getDate() - date_now.getDate() === 0 ) );
     }
     else if (selected === "tomorrow") {
-        return filtered_list.filter( item => (new Date(item.date).getDate() - date_now.getDate() == 1) && (new Date(item.date).getMonth() -  date_now.getMonth() === 0) );
+        return filtered_list.filter( item => (new Date(item.date).getDate() - date_now.getDate() === 1) && (new Date(item.date).getMonth() -  date_now.getMonth() === 0) );
     }
     else if (selected === "week") {
 
-        return filtered_list.filter( item => (new Date(item.date).getDate() - date_now.getDate() >=0) && ( new Date(item.date).getDate() - date_now.getDate() <=7 ) && new Date(item.date).getMonth() - date_now.getMonth() == 0);
+        return filtered_list.filter( item => (new Date(item.date).getDate() - date_now.getDate() >= 0) && ( new Date(item.date).getDate() - date_now.getDate() <=7 ) && new Date(item.date).getMonth() - date_now.getMonth() === 0);
     }
     else if(selected === "month") {
-        return filtered_list.filter( item => (new Date(item.date).getMonth() - date_now.getMonth() == 0) && (new Date(item.date).getDate() -  (date_now).getDate() >=0) );
+        return filtered_list.filter( item => (new Date(item.date).getMonth() - date_now.getMonth() === 0) && (new Date(item.date).getDate() -  (date_now).getDate() >=0) );
     }
     return getItems();
-}
-
-export function setTagsItems(tag) {
-    localStorage.setItem("TagsList", JSON.stringify(tag));
-}
-
-export function getTagsItems() {
-    const tagsArr = localStorage.getItem("TagsList");
-    if (tagsArr === null || tagsArr.length === 0) { return []; }
-    else { return JSON.parse(tagsArr); }
-}
-
-export function addTagsItem(tag) {
-    let tagList = getTagsItems();
-
-    if (!tag.id) return;
-    if (!tagList.length && !tag.length) { tagList = [tag]; }
-    else if (!tagList.includes(tag) && tag.length) { tagList.push(tag); }
-
-    setTagsItems(tagList);
-    return tagList;
-}
-
-export function deleteTagItem(tag) {
-    let tagList = getTagsItems();
-
-    for (let i = 0; i < tagList.length; i++) {
-        if(tagList[i].id.includes(tag)) {
-            tagList.splice(i, 1);
-            break;
-        }
-    }
-
-    setTagsItems(tagList);
-    return tagList;
 }
 
 export function validateExtension(name) {
@@ -185,8 +150,8 @@ export function attachedImageValidation(files) {
     if (files) {
         if (files.length) {
             if ((files[0].size / 1024) > 200) { return false; }
-            if (!validateExtension(files[0].name)) { return false; }
-            return true;
+            return validateExtension(files[0].name);
+
         }
     }
     return false;
