@@ -15,7 +15,7 @@ const Sidebar = ({openNav}) => {
   return (
     <div className={openNav ? "sidebar active" : "sidebar"}>
       <div className="user-menu">
-        <a href="#" className="togglePopupProfile" onClick={toggleOpenHandler}>
+        <a href="#/" className="togglePopupProfile" onClick={toggleOpenHandler}>
           <img src={Yarma} alt="Yaroslav Matushevych"/>
           <div className="user-info">
             <p>Yaroslav Matushevych</p>

@@ -132,27 +132,6 @@
   z-index: 999
 }
 
-
-  .tag-on-modal {
-    border-radius: 20px;
-    display: inline-block;
-    border: 1px solid #546672;
-    position: relative;
-    margin: 10px;
-    margin-left: 0;
-  }
-  .tag-name {
-    padding: 6px 15px;
-    cursor: pointer;
-  }
-
-  .delete-tag {
-    right: 5%;
-    top: 5%;
-    font-size: 14px;
-    position: absolute;
-  }
-
 $attached-image-block-outline-color: #BBB7B7;
 $text-font-size: 18px;
 .attach-image-block {

@@ -6,10 +6,10 @@ const Header = ({toggleOpenHandler}) => {
   return (
     <header className='header'>
       <div className="navbar-header">
-        <a href="#" className="navbar-logo">
+        <a href="#/" className="navbar-logo">
           <img src={logo} alt="ToDo List Logo"/>
         </a>
-        <a className="sidebar-toggle" onClick={toggleOpenHandler}>
+        <a href="#/" className="sidebar-toggle" onClick={toggleOpenHandler}>
           <i className="fas fa-bars"/>
         </a>
       </div>

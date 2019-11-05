@@ -66,7 +66,7 @@ class ModalForm extends Component {
 
   setAttachedImageState = (files) => {
     if (attachedImageValidation(files)) {
-      let promise = toBase64Promise(files[0]).then((file) => {
+        toBase64Promise(files[0]).then((file) => {
         this.setState({attachedImage: file,});
       });
     }
@@ -102,7 +102,7 @@ class ModalForm extends Component {
           </header>
           <form className="modal-form" id="modal-form"
                 onSubmit={edit ? this.wrapperOnEdit : this.wrapperOnSubmit}>
-            <p className="info-input-descript">Enter todo title</p>
+            <p className="info-input-descript">Enter title(One big and small letter, max 20 length)</p>
             <input onChange={this.onChangeHandler}
                    pattern="(?=.*[a-z])(?=.*[A-Z]).{2,20}"
                    className="info-input"
@@ -115,6 +115,7 @@ class ModalForm extends Component {
             <p className="info-input-descript">Enter description</p>
             <input onChange={this.onChangeHandler}
                    className="info-input"
+                   maxLength="300"
                    type="text"
                    name="description"
                    placeholder="Description"
@@ -146,8 +147,8 @@ class ModalForm extends Component {
               <p className="text">Attach image (200kb max)</p>
             </div>
             {attachedImage ? <img src={attachedImage} className="thumnail-img" alt="thumbnail"/>
-              : <p className="thumbnail-text">no file or invalid file</p>}
-
+              : <p className="thumbnail-text">no file or invalid file</p>
+            }
             <div className="btn-container">
               <div>
                 <button className="cancel-btn btn" onClick={toggleOpenHandler}>Cancel</button>

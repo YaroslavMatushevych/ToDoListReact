@@ -106,7 +106,7 @@ export function sortByPriority(data) {
 }
 
 export function sortItems(list) {
-    if (list.length != 0) {
+    if (!list.length) {
         let donePrioritisedList = sortByPriority(list.filter(item => item.isDone === false));
         let todoPrioritisedList = sortByPriority(list.filter(item => item.isDone === true));
         let resultingList = todoPrioritisedList.concat(donePrioritisedList);

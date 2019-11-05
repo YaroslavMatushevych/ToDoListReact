@@ -13,9 +13,9 @@ const MenuNavigation = () => {
         </a>
         {index === 3 &&
         <ul className='navigation-sub-list'>
-          <li className='navigation-subitem'><a className='navigation-subitem-link disabled' href="#">Task grid</a></li>
-          <li className='navigation-subitem'><a className="navigation-subitem-link active" href="#">Task list</a></li>
-          <li className='navigation-subitem'><a className='navigation-subitem-link disabled' href="#">Task detailed</a>
+          <li className='navigation-subitem'><a className='navigation-subitem-link disabled' href="#/">Task grid</a></li>
+          <li className='navigation-subitem'><a className="navigation-subitem-link active" href="#/">Task list</a></li>
+          <li className='navigation-subitem'><a className='navigation-subitem-link disabled' href="#/">Task detailed</a>
           </li>
         </ul>
         }

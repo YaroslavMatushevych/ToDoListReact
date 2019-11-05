@@ -82,8 +82,8 @@ const PageContainer = ({openNav}) => {
           <ToDoList
             data={data}
           />
-          <Footer/>
         </div>
+        <Footer/>
       </main>
     </MyContext.Provider>
   );

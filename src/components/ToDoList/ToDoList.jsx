@@ -44,18 +44,19 @@ class ToDoList extends Component {
 
   sorting = e => {
     let filtered = this.state.filtered;
-    if (e === 'default') filtered = sortItems(filtered);
+
+    if (e === 'default' && filtered) filtered = sortItems(filtered);
     else {
       if (e.target.id === "priority") {
-        filtered = sortByPriority(filtered);
+        if (filtered) filtered = sortByPriority(filtered);
         this.setState({filterTitle: "Sort By Priority"})
       }
       if (e.target.id === "isDone") {
-        filtered = sortByIsDone(filtered);
+        if (filtered) filtered = sortByIsDone(filtered);
         this.setState({filterTitle: "Sort By Done"})
       }
       if (e.target.id === "deadline") {
-        filtered = sortByIsDeadline(filtered);
+        if (filtered) filtered = sortByIsDeadline(filtered);
         this.setState({filterTitle: "Sort By Deadline"})
       }
     }
@@ -105,7 +106,7 @@ class ToDoList extends Component {
     if (items === undefined) {
       return <p style={pStyle}>Wait, please...</p>
     } else if (items === null || !items.length) {
-      return <p style={pStyle}>The list is empty, add something, please</p>
+      return <p style={pStyle}>The task list is empty, add something:)</p>
     } else {
       return items.map(item => {
         return (
@@ -173,7 +174,7 @@ class ToDoList extends Component {
             </label>
           </div>
         </div>
-        <div style={{display: 'flex', justifyContent: 'center', margin: '35px'}}>
+        <div style={{display: 'flex', justifyContent: 'center', marginBottom: '35px'}}>
           <select className="item positive select-deadline btn" onChange={this.onFilterChange}>
             <option defaultValue="select">Choose deadline</option>
             <option value="today">Today</option>
