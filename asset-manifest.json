@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/ToDoListReact/static/css/main.acf9e9e4.chunk.css",
-    "main.js": "/ToDoListReact/static/js/main.6be87aec.chunk.js",
-    "main.js.map": "/ToDoListReact/static/js/main.6be87aec.chunk.js.map",
+    "main.css": "/ToDoListReact/static/css/main.c51a54cb.chunk.css",
+    "main.js": "/ToDoListReact/static/js/main.3d5e1cf5.chunk.js",
+    "main.js.map": "/ToDoListReact/static/js/main.3d5e1cf5.chunk.js.map",
     "runtime-main.js": "/ToDoListReact/static/js/runtime-main.52a87e32.js",
     "runtime-main.js.map": "/ToDoListReact/static/js/runtime-main.52a87e32.js.map",
-    "static/css/2.cc92112e.chunk.css": "/ToDoListReact/static/css/2.cc92112e.chunk.css",
-    "static/js/2.75265d1f.chunk.js": "/ToDoListReact/static/js/2.75265d1f.chunk.js",
-    "static/js/2.75265d1f.chunk.js.map": "/ToDoListReact/static/js/2.75265d1f.chunk.js.map",
+    "static/css/2.ef8e8b31.chunk.css": "/ToDoListReact/static/css/2.ef8e8b31.chunk.css",
+    "static/js/2.fc94ff15.chunk.js": "/ToDoListReact/static/js/2.fc94ff15.chunk.js",
+    "static/js/2.fc94ff15.chunk.js.map": "/ToDoListReact/static/js/2.fc94ff15.chunk.js.map",
     "index.html": "/ToDoListReact/index.html",
-    "precache-manifest.b69188f9218b3d421908dc409c076be0.js": "/ToDoListReact/precache-manifest.b69188f9218b3d421908dc409c076be0.js",
+    "precache-manifest.36cee4d9ec200364f0bfc54d7d11a528.js": "/ToDoListReact/precache-manifest.36cee4d9ec200364f0bfc54d7d11a528.js",
     "service-worker.js": "/ToDoListReact/service-worker.js",
-    "static/css/2.cc92112e.chunk.css.map": "/ToDoListReact/static/css/2.cc92112e.chunk.css.map",
-    "static/css/main.acf9e9e4.chunk.css.map": "/ToDoListReact/static/css/main.acf9e9e4.chunk.css.map",
+    "static/css/2.ef8e8b31.chunk.css.map": "/ToDoListReact/static/css/2.ef8e8b31.chunk.css.map",
+    "static/css/main.c51a54cb.chunk.css.map": "/ToDoListReact/static/css/main.c51a54cb.chunk.css.map",
     "static/media/YARMA.png": "/ToDoListReact/static/media/YARMA.966603e7.png",
     "static/media/logo-text.png": "/ToDoListReact/static/media/logo-text.a7da770a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.52a87e32.js",
-    "static/css/2.cc92112e.chunk.css",
-    "static/js/2.75265d1f.chunk.js",
-    "static/css/main.acf9e9e4.chunk.css",
-    "static/js/main.6be87aec.chunk.js"
+    "static/css/2.ef8e8b31.chunk.css",
+    "static/js/2.fc94ff15.chunk.js",
+    "static/css/main.c51a54cb.chunk.css",
+    "static/js/main.3d5e1cf5.chunk.js"
   ]
 }
