@@ -11,7 +11,7 @@
     "react": "^16.11.0",
     "shortid": "^2.2.15",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "node-sass": "^4.12.0"
